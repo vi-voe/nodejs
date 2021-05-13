@@ -1,6 +1,25 @@
-const getAll = async () => {
-  // TODO: mock implementation. should be replaced during task development
-  return [];
-};
+const { Users } = require('../../utils/pseudoDb');
 
-module.exports = { getAll };
+const getAll = async () => Users
+
+const getUser = async(userId) => Users.find(obj => obj.id === userId)
+
+const saveUser = async(newUser) => {
+  Users.push(newUser)
+  return newUser;
+}
+
+const updateUser = async(userId, userInfo) => {
+  const user = await getUser(userId);
+  user.name = userInfo.name;
+  user.login = userInfo.login;
+  user.password = userInfo.password;
+  return user;
+}
+
+const deleteUser = async(userId) => {
+  const indexOfUser = Users.findIndex(obj => obj.id === userId)
+  Users.splice(indexOfUser, 1);
+}
+
+module.exports = { getAll, saveUser, getUser, updateUser, deleteUser };
