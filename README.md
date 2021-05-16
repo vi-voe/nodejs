@@ -1,5 +1,7 @@
 # RS School REST service
 
+# !!!! В template были внесены изменения после клонирования, предыдущий коммит актуализировал файл .github/workflows/ci.yml !!!!!!
+
 ## Prerequisites
 
 - Git - [Download & Install Git](https://git-scm.com/downloads).
