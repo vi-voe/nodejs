@@ -1,8 +1,9 @@
 const User = require("../resources/users/user.model");
+const Board = require("../resources/board/board.model");
 
 const db = {
   Users: [new User(), new User()],
-  Boards: [],
+  Boards: [new Board()],
   Tasks: []
 }
 

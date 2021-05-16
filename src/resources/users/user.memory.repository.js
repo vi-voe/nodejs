@@ -14,6 +14,7 @@ const updateUser = async(userId, userInfo) => {
   user.name = userInfo.name;
   user.login = userInfo.login;
   user.password = userInfo.password;
+  // user = {...user, ...userInfo}
   return user;
 }
 
